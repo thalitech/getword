@@ -1,0 +1,20 @@
+<h2>GETWORD</h2>
+
+<hr>
+
+<label>Prefixo do IP das máquinas (Exemplo: 192.168.15)</label>
+<input id="input" type="text" size="30" pInputText [(ngModel)]="prefixoIp">
+
+<p-button icon="pi pi-search" label="Buscar Maquinas" (click)="buscarMaquinas()"></p-button>
+
+<hr>
+
+<h2>Máquinas visíveis: </h2>
+<ul>
+    <li *ngFor="let ip of maquinasVisiveis">{{ip}}</li>
+</ul>
+
+<br>
+<br>
+<hr>
+<button (click)="logout()">Logout</button>
